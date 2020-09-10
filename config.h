@@ -68,5 +68,5 @@ static const struct arg args[] = {
 	{ cpu_perc, "CPU  %s%%|", NULL	      },
 	{ ram_perc, "RAM  %s%%|", NULL	      },
 	{ run_command, " :%s|", "amixer sget Master | awk -F\"[][]\" '/%/ { print $2 }' | head -n1" },
-	{ datetime, "|%s",           "%F %T" },
+	{ datetime, " %s",           "%H:%M" },
 };
