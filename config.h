@@ -63,6 +63,7 @@ static const char unknown_str[] = "n/a";
  */
 static const struct arg args[] = {
 	/* function format          argument */
+	{ run_command, "%s|", "curl wttr.in/hanoi?format=3" },
 	{ kernel_release, " %s|", NULL },
 	{ netspeed_rx, "ﯱ %sB/s|", "wlp2s0" },
 	{ cpu_perc, "CPU  %s%%|", NULL	      },
