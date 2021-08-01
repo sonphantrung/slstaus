@@ -71,6 +71,6 @@ static const struct arg args[] = {
 	{ netspeed_tx, "🔺%4sB|", "wlp2s0" },
 	{ cpu_perc, "🖥 :%s%%|", NULL	      },
 	{ ram_perc, "🧠:%s%%|", NULL	      },
-	{ run_command, "📢%s%%|", "pamixer --get-volume" },
+	{ run_command, "\x01📢%s%%|", "pamixer --get-volume" },
 	{ datetime, "📅%s",           "%d/%m/%y (%a) %H:%M" },
 };
