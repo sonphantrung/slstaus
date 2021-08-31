@@ -63,14 +63,15 @@ static const char unknown_str[] = "n/a";
  */
 static const struct arg args[] = {
 	/* function format          argument */
-	{ kernel_release, "🐧%s|", NULL },
-	{ battery_perc, "🔋%s%%", "BAT1" },
+	{ uptime, "^C2^ %s^d^ ", NULL },
+	{ kernel_release, "^C12^ %s^d^ ", NULL },
+	{ battery_perc, "^C6^  %s%%^d^", "BAT1" },
 	{ battery_state, "%s", "BAT1" },
-	{ battery_remaining, " %s|", "BAT1" },
-	{ netspeed_rx, "🔻%4sB ", "wlp2s0" },
-	{ netspeed_tx, "🔺%4sB|", "wlp2s0" },
-	{ cpu_perc, "🖥 :%s%%|", NULL	      },
-	{ ram_perc, "🧠:%s%%|", NULL	      },
-	{ run_command, "\x01🔈%s%%|", "pamixer --get-volume" },
-	{ datetime, "📅%s",           "%d/%m/%y (%a) %H:%M" },
+	{ battery_remaining, " %s ", "BAT1" },
+	{ netspeed_rx, "^C14^ﯲ  %4sB ", "wlp2s0" },
+	{ netspeed_tx, "ﯴ  %4sB^d^ ", "wlp2s0" },
+	{ cpu_perc, "^C6^  :%s%%^d^ ", NULL	      },
+	{ ram_perc, "^C5^ :%s%%^d^ ", NULL	      },
+	{ run_command, "^C6^蓼 %s^d^ ", "pamixer --get-volume-human" },
+	{ datetime, "^C13^  %s^d^",           "%d/%m/%y (%a) %H:%M" },
 };
