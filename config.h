@@ -64,14 +64,14 @@ static const char unknown_str[] = "n/a";
 static const struct arg args[] = {
 	/* function format          argument */
 	{ uptime, "^C2^ %s^d^ ", NULL },
-	{ kernel_release, "^C12^ %s^d^ ", NULL },
-	{ battery_perc, "^C6^  %s%%^d^", "BAT1" },
-	{ battery_state, "%s", "BAT1" },
-	{ battery_remaining, " %s ", "BAT1" },
-	{ netspeed_rx, "^C14^ﯲ  %4sB ", "wlan0" },
-	{ netspeed_tx, "ﯴ  %4sB^d^ ", "wlan0" },
-	{ cpu_perc, "^C6^  :%s%%^d^ ", NULL	      },
+	{ kernel_release, "^C9^ %s^d^ ", NULL },
+	{ battery_perc, "^C6^ %s%%^d^ ", "BAT1" },
+	//{ battery_state, "%s", "BAT1" },
+	//{ battery_remaining, " %s ", "BAT1" },
+	{ netspeed_rx, "^C14^󰛴 %4sB ", "wifibox0" },
+	{ netspeed_tx, "󰛶 %4sB^d^ ", "wifibox0" },
+	{ cpu_perc, "^C6^ :%s%%^d^ ", NULL	      },
 	{ ram_perc, "^C5^ :%s%%^d^ ", NULL	      },
-	{ run_command, "^C6^蓼 %s^d^ ", "pamixer --get-volume-human" },
-	{ datetime, "^C13^  %s^d^",           "%d/%m/%y (%a) %H:%M" },
+	{ vol_perc, "^C6^󰓃 %s%%^d^ ", "/dev/mixer" },
+	{ datetime, "^C13^ %s^d^",           "%d/%m/%y (%a) %H:%M" },
 };
